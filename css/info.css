@@ -1,0 +1,25 @@
+#info {
+ 
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664));
+    background: linear-gradient(to right, hsla(41, 95%, 50%, 0.459), hsla(332, 45%, 52%, 0.664));
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#info .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-virus {
+    margin: 20px;
+}
+
+.info-virus img {
+    width: 200px;
+    height: 160px;
+    border-radius: 50%;
+    border: 7px solid #fff;
+}

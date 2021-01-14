@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>FARMA´S MIL</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+        <link rel="stylesheet" href="css/fontello.css">
+        <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+    <style></style>
+    <script type="text/javascript">
+    (function(document) {
+      'use strict';
+
+      var LightTableFilter = (function(Arr) {
+
+        var _input;
+
+        function _onInputEvent(e) {
+          _input = e.target;
+          var tables = document.getElementsByClassName(_input.getAttribute('data-table'));
+          Arr.forEach.call(tables, function(table) {
+            Arr.forEach.call(table.tBodies, function(tbody) {
+              Arr.forEach.call(tbody.rows, _filter);
+            });
+          });
+        }
+
+        function _filter(row) {
+          var text = row.textContent.toLowerCase(), val = _input.value.toLowerCase();
+          row.style.display = text.indexOf(val) === -1 ? 'none' : 'table-row';
+        }
+
+        return {
+          init: function() {
+            var inputs = document.getElementsByClassName('light-table-filter');
+            Arr.forEach.call(inputs, function(input) {
+              input.oninput = _onInputEvent;
+            });
+          }
+        };
+      })(Array.prototype);
+
+      document.addEventListener('readystatechange', function() {
+        if (document.readyState === 'complete') {
+          LightTableFilter.init();
+        }
+      });
+
+    })(document);
+    </script>
+  </head>
+
+  <body>
+    <header>
+        <div class="contenedor">
+            <h1 class="">FARMA´S MIL</h1>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
+            <a class="" href="about.html">Acerca de nosotros</a>
+            <a class="icon-edit" href="registro.html">Registrarse</a>
+            <a class="icon-logout" href="login.html">Iniciar sesión</a>
+        </nav>
+        </div>
+    </header>
+    
+    <div class="contenedor">
+        <br>
+        <br>
+        <br>
+        <h2>Administrador</h2>
+    </div>
+
+    <div class="container">
+      <div style="height:50px"></div>
+      
+
+
+      <input class="form-control col-md-3 light-table-filter" data-table="order-table" type="text" placeholder="Search..">
+      <hr>
+
+      <table class="table table-bordered order-table ">
+        <thead>
+          <tr>
+            <th>CLIENTE</th>
+            <th>SERVICIO</th>
+            <th>FECHA</th>
+            <th>HORA</th>
+            <th>ESTADO</th>
+            <th></th>
+          </tr>
+
+        </thead>
+        <tr>
+          <td>Edison Rosales</td>
+          <td>RETIRO DE PRODUCTO</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Wagner Zambrano</td>
+          <td>TURNO EN FARMACIA</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Aguire Darwin</td>
+          <td>RETIRO DE PRODUCTO</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Nerexi Reyes</td>
+          <td>TURNO EN FARMACIA</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Esperancita Loor</td>
+          <td>RETIRO DE PRODUCTO</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Katerine Fernanda</td>
+          <td>TURNO EN FARMACIA</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Maria Angela</td>
+          <td>TURNO EN FARMACIA</td>
+          <td> <input type="date" id="dato" name="dato" required=""></td>
+                  <td><input type="time" id="tiempo" name="tiempo" required=""></td>
+                  <td>
+                    <select>
+                      <option>CONFIRMAR</option>
+                      <option>ANULAR</option>
+                    </select>
+                  </td>
+          <td><a class="btn btn-primary" onclick="editar()" href="">GUARDAR</a>
+          </td>
+        </tr>
+      </table>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+#productos h3, h4 {
+    text-align: center;
+}
+
+#productos .contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#productos article {
+    margin: 15px;
+}
+
+#productos img {
+    width: 100%;
+    max-width: 280px;
+}
+
+
+#productos a {
+    display: block;
+    width: 270px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding: 7px;
+    margin-top: 10px;
+    background: rgb(228, 121, 39);
+    border: 2px solid rgba(208, 37, 60, 0.347) ;
+}
